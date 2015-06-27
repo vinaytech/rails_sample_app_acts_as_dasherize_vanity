@@ -206,7 +206,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts_as_dasherize_vanity (= 0.0.1)
+  acts_as_dasherize_vanity
   better_errors
   bootstrap-sass
   byebug
