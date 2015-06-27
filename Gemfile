@@ -15,7 +15,6 @@ group :development, :test do
 end
 gem 'bootstrap-sass'
 gem 'high_voltage'
-gem 'thin'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
