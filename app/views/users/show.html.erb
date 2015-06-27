@@ -1,0 +1,16 @@
+<h3>User</h3>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>User dasherize vanity:</strong>
+  <%= @user.dasherize_vanity %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
