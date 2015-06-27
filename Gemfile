@@ -33,4 +33,4 @@ group :test do
   gem 'selenium-webdriver'
 end  
 
-gem 'acts_as_dasherize_vanity'
+gem 'acts_as_dasherize_vanity', '0.0.2'
