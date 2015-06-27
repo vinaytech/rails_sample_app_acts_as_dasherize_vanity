@@ -8,4 +8,11 @@ Rails.application.config.assets.version = '1.0'
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-# Rails.application.config.assets.precompile += %w( search.js )
+# Rails.application.config.assets.precompile += %w( search.js )   
+
+class String
+  def is_number?
+    return true if self =~ /\A\d+\Z/
+    true if Float(self) rescue false
+  end
+end

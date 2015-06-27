@@ -63,8 +63,12 @@ class ProductsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.where("id = ? or product_dasherize_vanity_url = ?",params[:id],params[:id]).first
+    def set_product    
+      if params[:id].is_number?
+        @product = Product.where("id = ?",params[:id]).first 
+      else 
+        @product = Product.where("product_dasherize_vanity_url = ?",params[:id]).first   
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

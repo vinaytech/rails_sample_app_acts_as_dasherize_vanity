@@ -63,8 +63,12 @@ class UsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.where("id = ? or dasherize_vanity= ?",params[:id],params[:id]).first
+    def set_user   
+      if params[:id].is_number?
+        @user = User.where("id = ?",params[:id]).first 
+      else 
+        @user = User.where("dasherize_vanity= ?",params[:id],params[:id]).first   
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
